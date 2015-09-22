@@ -19,4 +19,4 @@ ADD supervisord.conf /etc/supervisord.conf
 
 EXPOSE 80
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/local/bin/supervisord"]
