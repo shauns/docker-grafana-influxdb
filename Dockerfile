@@ -1,15 +1,12 @@
 FROM ubuntu:14.04
 
-ENV INFLUXDB_VERSION 0.9.4.1
-ENV GRAFANA_VERSION 2.0.2
-
 RUN apt-get -yqq update && apt-get -yqq upgrade
 RUN apt-get -yqq install tar wget python python-setuptools curl adduser
 
-RUN wget http://s3.amazonaws.com/influxdb/influxdb_${INFLUX_VERSION}_amd64.deb -O influxdb.deb && \
+RUN wget https://s3.amazonaws.com/influxdb/influxdb_0.9.4.1_amd64.deb -O influxdb.deb && \
         dpkg -i influxdb.deb
 RUN rm influxdb.deb
-RUN wget http://s3.amazonaws.com/grafanarel/grafana_${GRAFANA_VERSION}_amd64.deb -O grafana.deb && \
+RUN wget http://s3.amazonaws.com/grafanarel/grafana_2.0.2_amd64.deb -O grafana.deb && \
         dpkg -i grafana.deb
 RUN rm grafana.deb
 
