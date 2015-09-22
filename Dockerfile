@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-ENV INFLUXDB_VERSION 0.9.0
+ENV INFLUXDB_VERSION 0.9.4.1
 ENV GRAFANA_VERSION 2.0.2
 
 RUN apt-get -yqq update && apt-get -yqq upgrade
